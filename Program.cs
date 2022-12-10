@@ -1,7 +1,18 @@
-﻿class Program
+﻿namespace OSeminar7
 {
-    public static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Testing");
+        public static void Main(string[] args)
+        {
+            StudentService studentService = new StudentService(
+                new List<Student>() {
+                    new SmallStudent(),
+                    new MiddleStudent(),
+                    new HighStudent(),
+                    new SmallStudent()
+                }
+            );
+            studentService.service();
+        }
     }
 }
